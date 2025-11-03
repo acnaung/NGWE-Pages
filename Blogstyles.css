@@ -1,0 +1,219 @@
+:root {
+    --primary: black;
+    --secondary: purple;
+    --sub: gold;
+
+}
+
+body {
+    font-family: 'Orbitron', sans-serif; /* from link googlefont */
+}
+.btn-primary {
+    background-color: var (--primary);
+}
+
+/* navbar, Logo and Text Container */
+.navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%; /* Spans full width */
+        z-index: 1000; /* Stays above background and content */
+        background: linear-gradient(to right, black, gold); /* Keep gradient */
+        border-bottom: 2px solid goldenrod;
+        
+}
+
+.navbar-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;/*Prevent underline on hover */
+}
+.navbar-brand:hover {
+    text-decoration: none;  
+}
+.navbar-brand img {
+    width: 75px; /* Set logo width */
+    height: 75px; /* Set logo height */
+    border-radius: 50%; /* Round frame */
+    border: 4px solid var(--sub); /* Gold border */
+    object-fit: cover; /* Ensure image fits properly */ 
+}
+
+.navbar-brand .logo-text {
+    margin-top: 10px; /* Space below logo */
+    font-size: 1.2rem; /* Font size for text */
+    color: silver; /* Silver text color */
+    font-weight: bold;
+}
+
+/* Navbar Tabs Styles */
+.nav-tabs .nav-link {
+    background-color: transparent; /* Make sure tabs blend with the navbar */
+    border-radius: 5px; /* remove Rounded tabs */
+    border:none;
+    box-shadow:none;
+}
+.nav-tabs {
+    border-bottom: none;
+}
+
+.nav-tabs .nav-item {
+    margin-right: 35px; /* Add spacing between tabs */
+}
+
+.nav-link {
+    color: rgb(78, 54, 54); /* Default text color */
+}
+
+.nav-link:hover {
+    background-color: silver; /* Purple hover effect */
+}
+
+.nav-link.active {
+    background-color: #388E3C; /* Active tab background */
+}
+.dropdown-menu .dropdown-item:hover {
+    color: gold;
+    background-color: silver;
+    display: block; /*Hide the menu by default */
+}
+
+.dropdown-menu {
+    display: none; /*Hide the menu by default */
+}
+
+.background-section {
+    position: relative; /* Ensures proper positioning for the pseudo-element */
+    min-height: 1400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    overflow: hidden; /* Prevents the pseudo-element from overflowing */
+}
+
+.background-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('MPimages/OffshoreWPaper2.jpg'); /* Your image */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.5; /* Adjust the value for desired opacity */
+    z-index: -1; /* Ensures it stays behind the text/content */
+}
+
+/* Background for Home Page */
+body.home-page .background-section::before {
+    background-image: url('MPimages/OffshoreWPaper2.jpg');
+}
+
+/* Background for Blog Page */
+body.blog-page .background-section::before {
+    background-image: url('MPimages/wb_under_construct.jpeg'); /* Replace with the correct image path */
+}
+
+/* Background for PNA Page */
+body.pna-page .background-section::before {
+    background-image: url('MPimages/pnawell.png'); /* Replace with the correct image path */
+}
+
+/* Floating animation for <h2> */
+@keyframes floatUpDown {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-250px); /* Moves text up */
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Floating animation for <p> */
+@keyframes floatDownUp {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(250px); /* Moves text down */
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.floating-h2 {
+    position: relative;
+    animation: floatUpDown 15s ease-in-out infinite; /* Up-down animation for <h2> */
+    background: linear-gradient(to right, black, gold); /* Gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.floating-p {
+    position: relative;
+    animation: floatDownUp 15s ease-in-out infinite; /* Down-up animation for <p> */
+    background: linear-gradient(to right, purple, rgb(27, 9, 3)); /* Gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 1.5rem;
+}
+
+.modal-content {
+    background-color: black; /* Sets the background color to black */
+    color: white; /* Ensures text remains readable */
+    border: none; /* Optional: Removes border for a sleek look */
+}
+
+.modal-header, .modal-footer {
+    border: none; /* Optional: Removes the header and footer borders */
+}
+
+.scroll-top-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: lightgrey;
+    color: #3a3636;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    cursor: pointer;
+    opacity: 0; /*Start invisible */
+    pointer-events: none; /* Prevent interaction when invisible */
+    z-index: 1000; /* Ensures it stays on top */
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0,0,0,0,0.2);
+}
+
+.scroll-top-btn.visible {
+opacity: 1; /*Makes it visible */
+pointer-events: auto; /*Enables interaction */
+}
+
+.scroll-top-btn:hover {
+    transform: scale(1.1);
+    background-color: #0056b3;
+    box-shadow: 0 6px 12px rgba(0,0,0,0,0.3);
+}
+
+.bg-blackgold {
+    background: linear-gradient(45deg, #000000, #DAA520); /* Black and gold color for content carousel background*/
+    color: white;
+}
+
+.carousel-inner .bg-blackgold {
+    background: linear-gradient(45deg, #000000, #DAA520) /* Additional safeguard */
+}

@@ -1,0 +1,10 @@
+
+//* Site Construction btn *//
+#constructionMessage .btn:hover {
+    background-color: var(--secondary) !important;
+}
+
+//* pointer hover for modal *//
+.pointer:hover {
+    cursor: pointer;
+    }

@@ -1,0 +1,34 @@
+body {
+    background-color: #f8f9fa;
+    font-family: Arial, sans-serif;
+}
+
+.card {
+    border-radius: 10px;
+    border: none;
+}
+
+.card-header {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: left;
+}
+
+.list-group {
+    text-align: left;
+}
+
+.list-group-item {
+    font-size: 1rem;
+    border: none; /* Removes default borders */
+    padding-left: 20px; /* Adds space for visual hierarchy */
+    line-height: 1.8; /* Increases readability */
+    text-align: left;
+}
+
+.list-group-item::before {
+    content: "✔"; /* Adds custom bullets (e.g., checkmark) */
+    color: black; /* color for bullets */
+    font-size: 1.2rem;
+    margin-right: 10px;
+}

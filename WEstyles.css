@@ -1,0 +1,390 @@
+:root {
+    --primary: black;
+    --secondary: purple;
+    --sub: gold;
+
+}
+
+body {
+    font-family: 'Orbitron', sans-serif; /* from link googlefont */
+}
+.btn-primary {
+    background-color: var (--primary);
+}
+
+/* navbar, Logo and Text Container */
+.navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%; /* Spans full width */
+        z-index: 1000; /* Stays above background and content */
+        background: linear-gradient(to right, black, gold); /* Keep gradient */
+        border-bottom: 2px solid goldenrod;
+        
+}
+
+.navbar-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;/*Prevent underline on hover */
+}
+.navbar-brand:hover {
+    text-decoration: none;  
+}
+.navbar-brand img {
+    width: 75px; /* Set logo width */
+    height: 75px; /* Set logo height */
+    border-radius: 50%; /* Round frame */
+    border: 4px solid var(--sub); /* Gold border */
+    object-fit: cover; /* Ensure image fits properly */ 
+}
+
+.navbar-brand .logo-text {
+    margin-top: 10px; /* Space below logo */
+    font-size: 1.2rem; /* Font size for text */
+    color: silver; /* Silver text color */
+    font-weight: bold;
+}
+
+/* Navbar Tabs Styles */
+.nav-tabs .nav-link {
+    background-color: transparent; /* Make sure tabs blend with the navbar */
+    border-radius: 5px; /* remove Rounded tabs */
+    border:none;
+    box-shadow:none;
+}
+.nav-tabs {
+    border-bottom: none;
+}
+
+.nav-tabs .nav-item {
+    margin-right: 35px; /* Add spacing between tabs */
+}
+
+.nav-link {
+    color: rgb(78, 54, 54); /* Default text color */
+}
+
+.nav-link:hover {
+    background-color: silver; /* Purple hover effect */
+}
+
+.nav-link.active {
+    background-color: #388E3C; /* Active tab background */
+}
+.dropdown-menu .dropdown-item:hover {
+    color: gold;
+    background-color: silver;
+    display: block; /*Hide the menu by default */
+}
+
+.dropdown-menu {
+    display: none; /*Hide the menu by default */
+}
+
+.background-section {
+    position: relative; /* Ensures proper positioning for the pseudo-element */
+    min-height: 1400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    overflow: hidden; /* Prevents the pseudo-element from overflowing */
+}
+
+.background-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('MPimages/OffshoreWPaper2.jpg'); /* Your image */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.5; /* Adjust the value for desired opacity */
+    z-index: -1; /* Ensures it stays behind the text/content */
+}
+
+/* Background for Home Page */
+body.home-page .background-section::before {
+    background-image: url('MPimages/OffshoreWPaper2.jpg');
+}
+
+/* Background for Blog Page */
+body.blog-page .background-section::before {
+    background-image: url('MPimages/wb_under_construct.jpeg'); /* Replace with the correct image path */
+}
+
+/* Background for PNA Page */
+body.pna-page .background-section::before {
+    background-image: url('MPimages/pnawell.png'); /* Replace with the correct image path */
+}
+
+/* Background for Well_Engineering Page */
+body.pna-page .background-section::before {
+    background-image: url('MPimages/pnawell.png'); /* Replace with the correct image path */
+}
+
+
+
+/* Floating animation for <h2> */
+@keyframes floatUpDown {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-250px); /* Moves text up */
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Floating animation for <p> */
+@keyframes floatDownUp {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(250px); /* Moves text down */
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.floating-h2 {
+    position: relative;
+    animation: floatUpDown 15s ease-in-out infinite; /* Up-down animation for <h2> */
+    background: linear-gradient(to right, black, gold); /* Gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.floating-p {
+    position: relative;
+    animation: floatDownUp 15s ease-in-out infinite; /* Down-up animation for <p> */
+    background: linear-gradient(to right, purple, rgb(27, 9, 3)); /* Gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 1.5rem;
+}
+
+.modal-content {
+    background-color: black; /* Sets the background color to black */
+    color: white; /* Ensures text remains readable */
+    border: none; /* Optional: Removes border for a sleek look */
+}
+
+.modal-header, .modal-footer {
+    border: none; /* Optional: Removes the header and footer borders */
+}
+
+.scroll-top-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: lightgrey;
+    color: #3a3636;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    cursor: pointer;
+    opacity: 0; /*Start invisible */
+    pointer-events: none; /* Prevent interaction when invisible */
+    z-index: 1000; /* Ensures it stays on top */
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0,0,0,0,0.2);
+}
+
+.scroll-top-btn.visible {
+opacity: 1; /*Makes it visible */
+pointer-events: auto; /*Enables interaction */
+}
+
+.scroll-top-btn:hover {
+    transform: scale(1.1);
+    background-color: #0056b3;
+    box-shadow: 0 6px 12px rgba(0,0,0,0,0.3);
+}
+
+.bg-blackgold {
+    background: linear-gradient(45deg, #000000, #DAA520); /* Black and gold color for content carousel background*/
+    color: white;
+}
+
+.carousel-inner .bg-blackgold {
+    background: linear-gradient(45deg, #000000, #DAA520) /* Additional safeguard */
+}
+
+/* WE tab style */
+.tab-content {
+    padding: 20px;
+}
+.form-section {
+    margin-bottom: 20px;
+}
+.form-group-custom {
+    padding: 15px;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    background-color: #f8f9fa;
+    margin-bottom: 20px;
+}
+.container-custom {
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    padding: 20px;
+    background-color: #ffffff;
+}
+.row-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.column {
+    flex: 1 1 calc(50% - 20px); /* Flex-grow, flex-shrink, and flex-basis */
+    box-sizing: border-box;
+}
+
+/* Button Styles */
+.buttons button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#okButton {
+    background-color: #007bff;
+    color: white;
+}
+
+#cancelButton {
+    background-color: #6c757d;
+    color: white;
+}
+
+#applyButton {
+    background-color: #28a745;
+    color: white;
+}
+
+#helpButton {
+    background-color: #17a2b8;
+    color: white;
+}
+
+/* Popup Modal Styles */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup.hidden {
+    display: none; /* Hide the popup by default */
+}
+
+.popup-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.popup-content h2 {
+    margin: 0 0 10px;
+}
+
+.popup-content p {
+    margin: 0 0 20px;
+}
+
+.popup-content button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Modal Styles (The feature is not available) */
+.custom-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.hidden {
+    display: none; /* Hide the modal by default */
+}
+
+.modal-content {
+    background-color: rgb(64, 64, 58);
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Styling for the content */
+.modal-content h2 {
+    font-family: 'Arial', sans-serif; /* Change to desired font */
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.modal-content p {
+    font-family: 'Verdana', sans-serif; /* Change font for paragraph */
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+
+/* Close button styling */
+.btn-close {
+    padding: 10px 20px;
+    font-size: 10px;
+    background-color: red;
+    color: black;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.blinking {
+    animation: blink 1s step-start infinite;
+}
+
+/* Keyframes for blinking animation */
+@keyframes blink {
+    50% {
+        opacity: 0; /* Makes the text disappear halfway through the animation */
+    }
+}

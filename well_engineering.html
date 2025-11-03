@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Well Engineering</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="WEstyles.css">
+    
+</head>
+<body class="well_engineering-page">
+    <div class="background-section">
+
+   <!----Navbar--Tabs with dropdowns & Logo and Heading----->
+
+    
+   
+   <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <!--Logo with round frame and text-->
+            <a class="navbar-brand d-flex align-items-center ms-3" href="#">
+                <img src="MPimages/NGWE_BlackGold.png" alt="logo" class="me-2">
+                <span class="logo-text">NGWE Energy & Digital Business</span>
+            </a>
+               
+    <!---Navbar Toggle for small devices-->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+    <!--Navbar Menu----->        
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="PHome1.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Energy</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="oil_and_gas.html">Oil & Gas</a></li>
+                            <li><a class="dropdown-item" href="exploration.html">Exploration</a></li>
+                            <li><a class="dropdown-item" href="development.html">Development</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="pna.html">P&A</a></li>
+                        </ul>
+                    </li>
+                                        
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Business</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="well_engineering.html">Well Engineering</a></li>
+                            <li><a class="dropdown-item" href="design_and_cost.html">Design & Cost</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="front_end_development.html">Front End Development</a></li>
+                            <li><a class="dropdown-item" href="back_end_development.html">Back End Development</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page"href="Blog.html">Blog</a>
+                    </li>
+                </ul>
+            </div>    
+    <!---Contact Button---->
+                <a href="#" class="btn btn-secondary d-flex align-items-center me-3" data-bs-toggle="modal" data-bs-target="#contactModal">
+                    <img src="MPimages/telephone.png" alt="Phone Icon" class="me-2" height="20px" width="auto">
+                    <span>Contact</span>
+                </a>
+                <!-- Modal (Pop-up Contact Form) -->
+                <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="contactModalLabel">Contact Us</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="mb-3">
+                                        <label for="name" class="form-label">Name</label>
+                                        <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="email" class="form-label">Email</label>
+                                        <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="message" class="form-label">Message</label>
+                                        <textarea class="form-control" id="message" rows="3" placeholder="Your message"></textarea>
+                                    </div>
+                                    <button type="submit" class="btn btn-secondary">Send</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+        </div>    
+    
+    </nav>
+
+<!---Background Section-->
+<div class="background-section">
+    <div class="container text-white text-center py-5">
+        <h2 class="floating-h2">Well Engineering</h2>
+        <p class="floating-p">Well construction</p>
+        <p class="floating-p">Casing Design</p>
+        <p class="floating-p">Directional Planning</p>
+        
+    </div>
+</div>
+</div> 
+    <div class="container mt-5">
+        <!-- Navigation Tabs -->
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="select" data-bs-toggle="tab" data-bs-target="#select" type="button" role="tab" aria-controls="select" aria-selected="true">Select</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="edit-tab" data-bs-toggle="tab" data-bs-target="#edit" type="button" role="tab" aria-controls="edit" aria-selected="true">Edit</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="temperature" data-bs-toggle="tab" data-bs-target="#temperature" type="button" role="tab" aria-controls="temperature" aria-selected="true">Temperature</button>
+            </li>
+            <li class="nav-item">
+                <button class="nav-link active" id="plot" data-bs-toggle="tab" data-bs-target="#plot" type="button" role="tab" aria-controls="plot" aria-selected="true">Plot</button>
+            </li>
+            <li class="nav-item">
+                <button class="nav-link active" id="custom" data-bs-toggle="tab" data-bs-target="#custom" type="button" role="tab" aria-controls="custom" aria-selected="true">Custom</button>
+            </li>
+            <li class="nav-item">
+                <button class="nav-link active" id="options" data-bs-toggle="tab" data-bs-target="#options" type="button" role="tab" aria-controls="options" aria-selected="true">Options</button>
+            </li>
+        </ul>
+
+        <!-- Tab Content -->
+        <div class="tab-content" id="myTabContent">
+            <!-- Select Tab -->
+            <div class="tab-pane fade show active container-custom" id="select" role="tabpanel" aria-labelledby="select-tab">
+                <h3>Select Data</h3>
+                
+                <div class="row-container">
+                    <!-- Drilling Loads Section -->
+                    <div class="column form-group-custom">
+                        <h4>Drilling Loads</h4>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="displacementToGas">
+                            <label class="form-check-label" for="displacementToGas">Displacement to Gas</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="gasKickProfile">
+                            <label class="form-check-label" for="gasKickProfile">Gas Kick Profile</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="fracture@shoew/1/3bhpatsurface">
+                            <label class="form-check-label" for="fracture@shoew/1/3bhpatsurface">Fracture @Shoe w/ 1/3 BHP at Surface</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="fracture@shoew/gasgradientabove">
+                            <label class="form-check-label" for="fracture@shoew/gasgradientabove">Fracture @ Shoe w/Gas Gradient Above</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="lostreturnswithwater">
+                            <label class="form-check-label" for="lostreturnswithwater">Lost Returns with Water</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="surfaceprotectionbop">
+                            <label class="form-check-label" for="surfaceprotectionbop">Surface Protection (BOP)</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="pressuretest">
+                            <label class="form-check-label" for="pressuretest">Pressure Test</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="greenCementPressureTest">
+                            <label class="form-check-label" for="greenCementPressureTest">Green Cement Pressure Test</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="drillahead">
+                            <label class="form-check-label" for="drillahead">Drill Ahead</label>
+                        </div>
+                    <!-- Add more checkboxes as needed -->
+                    </div>
+
+                    <!-- Production Loads Section -->
+                    <div class="column form-group-custom">
+                        <h4>Production Loads</h4>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="tubingLeak">
+                            <label class="form-check-label" for="tubingLeak">Tubing Leak</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="stimulationSurfaceLeak">
+                            <label class="form-check-label" for="stimulationSurfaceLeak">Stimulation Surface Leak</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="injectiondowncasing">
+                            <label class="form-check-label" for="injectiondowncasing">Injection Down Casing</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="gasmigration">
+                            <label class="form-check-label" for="gasmigration">Gas Migration</label>
+                        </div>
+                        <!-- Add more checkboxes as needed -->
+                    </div>
+                </div>
+
+                <div class="row-container">
+                    <!-- Internal Profile Section -->
+                    <div class="column form-group-custom">
+                        <h4>Internal Profile</h4>
+                        <div class="form-group">
+                            <label for="internalProfileSelect">Select Internal Profile:</label>
+                            <select class="form-control" id="internalProfileSelect">
+                                <option value="displacementToGas">Displacement to Gas</option>
+                                <option value="gaskickprofile">Gas Kick Profile</option>
+                                <option value="fracture@shoew/gasgradientabove">Fracture @ Shoe w/Gas Gradient Above</option>
+                                <option value="fracture@shoew/1/3bhpatsurface">Fracture @Shoe w/ 1/3 BHP at Surface</option>
+                                <option value="lostreturnswithwater">Lost Returns with Water</option>
+                                <option value="surfaceprotectionbop">Surface Protection (BOP)</option>
+                                <option value="pressuretest">Pressure Test</option>
+                                <option value="greenCementPressureTest">Green Cement Pressure Test</option>
+                                <option value="drillahead">Drill Ahead</option>
+                                <!-- Add more options as needed -->
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- External Profile Section -->
+                    <div class="column form-group-custom">
+                        <h4>External Profile</h4>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="externalProfile" id="mudAndCementMixWater">
+                            <label class="form-check-label" for="mudAndCementMixWater">Mud and Cement Mix-Water</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="externalProfile" id="permeableZones">
+                            <label class="form-check-label" for="permeableZones">Permeable Zones</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="externalProfile" id="minimumformationporepressure">
+                            <label class="form-check-label" for="minimumformationporepressure">Minimum Formation Pore Pressure</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="externalProfile" id="porepressurew/seawatergradient">
+                            <label class="form-check-label" for="porepressurew/seawatergradient">Pore Pressure w/ Seawater Gradient</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="externalProfile" id="fluidgradientsw/porepressure">
+                            <label class="form-check-label" for="fluidgradientsw/porepressure">Fluid Gradients w/ Pore Pressure</label>
+                        </div>
+                        <!-- Add more radio buttons as needed -->
+                    </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="row">
+                    <div class="col">
+                        <button type="button" onclick="showCustomAlert()" class="btn btn-primary">OK</button>
+                        <!--Custom Modal-->
+                        <div id="customAlert" class="custom-modal hidden">
+                            <div class="modal-content">
+                                <h2 class="blinking">Under Construction</h2>
+                                <p class="blinking">This Feature is NOT AVAILABLE!</p>
+                                <button onclick="closeCustomAlert()" class="btn-close"></button>
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-secondary">Cancel</button>
+                        <button type="button" class="btn btn-success">Apply</button>
+                        <button type="button" class="btn btn-info">Help</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Other Tabs Content (same as before) -->
+        </div>
+    </div>
+
+    <!--Under Construction Popup Modal-->
+    <div id="popupModal" class="popup hidden">
+        <div class="popup-content">
+            <h2>Under Construction</h2>
+            <p>This feature is currently under development. Check back soon!</p>
+            <button id="closePopup">Close</button>
+        </div>
+    </div>
+
+    <!----footer with Contact Information-->
+<footer class="bg-dark text-white text-center mt-5 p-4">
+    <p>© NGWE Energy, 204 Bateman Road, Brentwood, Suite 6, Perth, WA 6153</p>
+    <p>240.547.1124 | <a href="mailto:ac.naung@outlook.com" class="text-white">Email Us</a></p>
+    <p>
+        <a href="Privacy.html" class="text-white">Privacy Policy</a> | 
+        <a href="#" class="text-white">Site Map</a> | 
+        <a href="#" class="text-white" data-bs-toggle="modal" data-bs-target="#contactModal">Contact</a>
+        <a href="#" class="text-white" data-bs-toggle="modal" data-bs-target="#googleMapModal">Google Map</a>
+    </p>
+    <div class="mt-3">
+        <img src="MPimages/security-badge.svg" alt="Security Badge" height="40">
+    </div>
+</footer>
+
+<!-- Google Map Modal -->
+<div class="modal fade" id="googleMapModal" tabindex="-1" aria-labelledby="googleMapModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="googleMapModalLabel">Our Location</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- Google Map Embed -->
+                <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2100.459743956592!2d115.85075017122543!3d-32.045647997699945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2a32a2d4cf45fc01%3A0x3def19fd7bd548cd!2s204%20Bateman%20Rd%2C%20Brentwood%20WA%206153!5e1!3m2!1sen!2sau!4v1741961392542!5m2!1sen!2sau" 
+                width="600" 
+                height="450" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </div>
+</div>
+<!---Scroll to top button ----->
+<button id="scrollTopButton" class="scroll-top-btn" aria-label="Scroll to top" tabindex="0">↑</button>
+
+   
+
+<script src="Bstrapsuggest.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>    
+
+    <!-- Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

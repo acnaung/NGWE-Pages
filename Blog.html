@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Blogstyles.css">
+</head>
+<body class="blog-page">
+    <div class="background-section">
+
+   <!----Navbar--Tabs with dropdowns & Logo and Heading----->
+
+    
+   
+   <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <!--Logo with round frame and text-->
+            <a class="navbar-brand d-flex align-items-center ms-3" href="#">
+                <img src="MPimages/NGWE_BlackGold.png" alt="logo" class="me-2">
+                <span class="logo-text">NGWE Energy & Digital Business</span>
+            </a>
+               
+    <!---Navbar Toggle for small devices-->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+    <!--Navbar Menu----->        
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="PHome1.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Energy</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="oil_and_gas.html">Oil & Gas</a></li>
+                            <li><a class="dropdown-item" href="exploration.html">Exploration</a></li>
+                            <li><a class="dropdown-item" href="development.html">Development</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="pna.html">P&A</a></li>
+                        </ul>
+                    </li>
+                                        
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Business</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="well_engineering.html">Well Engineering</a></li>
+                            <li><a class="dropdown-item" href="design_and_cost.html">Design & Cost</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="front_end_development.html">Front End Development</a></li>
+                            <li><a class="dropdown-item" href="back_end_development.html">Back End Development</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page"href="Blog.html">Blog</a>
+                    </li>
+                </ul>
+            </div>    
+    <!---Contact Button---->
+                <a href="#" class="btn btn-secondary d-flex align-items-center me-3" data-bs-toggle="modal" data-bs-target="#contactModal">
+                    <img src="MPimages/telephone.png" alt="Phone Icon" class="me-2" height="20px" width="auto">
+                    <span>Contact</span>
+                </a>
+                <!-- Modal (Pop-up Contact Form) -->
+                <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="contactModalLabel">Contact Us</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="mb-3">
+                                        <label for="name" class="form-label">Name</label>
+                                        <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="email" class="form-label">Email</label>
+                                        <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="message" class="form-label">Message</label>
+                                        <textarea class="form-control" id="message" rows="3" placeholder="Your message"></textarea>
+                                    </div>
+                                    <button type="submit" class="btn btn-secondary">Send</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+        </div>    
+    
+    </nav>
+
+<!---Background Section-->
+<div class="background-section">
+    <div class="container text-white text-center py-5">
+        <h2 class="floating-h2">! Go Back to Home!</h2>
+        <p class="floating-p">Oops!!!, Site is Under construction</p>
+    </div>
+</div>
+</div> 
+
+
+<!---Hero-->
+
+
+
+<!---Carousel for Testimonials-->
+
+<div id="testimonialCarousel" class="carousel slide mt-5" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        <!-- Slide 1 -->
+        <div class="carousel-item active">
+            <div class="p-5 text-center bg-blackgold text-white">
+                <img src="MPimages/website-maitenance-computer-repair-website-maintenance-svgrepo-com.svg" alt="UC">
+                <h5 class="mb-3">Under Construction</h5>
+                <p>"Coming soon..."</p>
+                <p class="text-end">Sorry for your inconvenience!</p>
+            </div>
+        </div>
+        <!-- Slide 2 -->
+        <div class="carousel-item">
+            <div class="p-5 text-center bg-blackgold text-white">
+                <img src="MPimages/website-maitenance-computer-repair-website-maintenance-svgrepo-com.svg" alt="UC">
+                <h5 class="mb-3">Under Construction</h5>
+                <p>"Coming soon..."</p>
+                <p class="text-end">Sorry for your inconvenience!</p>
+            </div>
+        </div>
+        <!-- Slide 3 -->
+        <div class="carousel-item">
+            <div class="p-5 text-center bg-blackgold text-white">
+                <img src="MPimages/website-maitenance-computer-repair-website-maintenance-svgrepo-com.svg" alt="UC">
+                <h5 class="mb-3">Under Construction</h5>
+                <p>"Coming soon..."</p>
+                <p class="text-end">Sorry for your inconvenience!</p>
+            </div>
+        </div>
+        <!-- Slide 4 -->
+        <div class="carousel-item">
+            <div class="p-5 text-center bg-blackgold text-white">
+                <img src="MPimages/website-maitenance-computer-repair-website-maintenance-svgrepo-com.svg" alt="UC">
+                <h5 class="mb-3">Under Construction</h5>
+                <p>"Coming soon..."</p>
+                <p class="text-end">Sorry for your inconvenience!</p>
+            </div>
+        </div>
+    </div>
+    <!-- Controls -->
+    <a class="carousel-control-prev" href="#testimonialCarousel" role="button" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#testimonialCarousel" role="button" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </a>
+</div>
+
+
+
+
+
+<!---Card for Content------>
+
+<div class="container mt-5">
+    <div class="row">
+        <!-- Card 1 -->
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Stay Informed</h5>
+                    <p class="card-text">Sign up to receive industry trends, news, and updates.</p>
+                    <a href="#" class="btn btn-warning">SUBSCRIBE</a>
+                </div>
+            </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Plan Your Career with Us</h5>
+                    <p class="card-text">Join our team to realize your full potential.</p>
+                    <a href="#" class="btn btn-warning">JOIN OUR TEAM</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!---links-->
+
+
+
+<!----footer with Contact Information-->
+<footer class="bg-dark text-white text-center mt-5 p-4">
+    <p>© NGWE Energy, 204 Bateman Road, Brentwood, Suite 6, Perth, WA 6153</p>
+    <p>240.547.1124 | <a href="mailto:ac.naung@outlook.com" class="text-white">Email Us</a></p>
+    <p>
+        <a href="Privacy.html" class="text-white">Privacy Policy</a> | 
+        <a href="#" class="text-white">Site Map</a> | 
+        <a href="#" class="text-white" data-bs-toggle="modal" data-bs-target="#contactModal">Contact</a>
+        <a href="#" class="text-white" data-bs-toggle="modal" data-bs-target="#googleMapModal">Google Map</a>
+    </p>
+    <div class="mt-3">
+        <img src="MPimages/security-badge.svg" alt="Security Badge" height="40">
+    </div>
+</footer>
+
+<!-- Google Map Modal -->
+<div class="modal fade" id="googleMapModal" tabindex="-1" aria-labelledby="googleMapModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="googleMapModalLabel">Our Location</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- Google Map Embed -->
+                <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2100.459743956592!2d115.85075017122543!3d-32.045647997699945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2a32a2d4cf45fc01%3A0x3def19fd7bd548cd!2s204%20Bateman%20Rd%2C%20Brentwood%20WA%206153!5e1!3m2!1sen!2sau!4v1741961392542!5m2!1sen!2sau" 
+                width="600" 
+                height="450" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </div>
+</div>
+<!---Scroll to top button ----->
+<button id="scrollTopButton" class="scroll-top-btn" aria-label="Scroll to top" tabindex="0">↑</button>
+
+   
+
+<script src="Bstrapsuggest.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>    
+
+</body>
+</html>
